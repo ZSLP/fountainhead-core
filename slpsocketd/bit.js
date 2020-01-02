@@ -75,7 +75,7 @@ const init = function(config) {
           const types = encoded.q.db
           if (!types || types.indexOf("c") >= 0) {
             let filter = new mingo.Query(encoded.q.find)
-            let filtered = block.txns.filter(function(tx) {
+            let filtered = block.txs.filter(function(tx) {
               return filter.test(tx)
             })
             let transformed = []
